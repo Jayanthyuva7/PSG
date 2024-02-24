@@ -1,0 +1,60 @@
+show databases;
+
+create database pSg;
+drop database PsG;
+
+use psg;
+desc mca;
+
+create table BSC(
+sid int,
+sname varchar(45),
+sage tinyint
+);
+insert into bsc values (101,'jayanth',18),(102,'Sriniti',19);
+select * from bsc;
+desc bsc;
+ALTER TABLE bsc ADD(
+   semail varchar(25)
+);
+
+ALTER TABLE bsc DROP COLUMN seMaiL;
+
+
+
+
+show tables from psg;
+
+select * from mca;
+
+insert into mca values (103,"Sriniti",null);
+
+savepoint a123;
+
+insert into mca values (104,"jenitta","Jenitta@gmail.com");
+
+rollback;
+
+ALTER TABLE bsc ADD(
+    country varchar(25) DEFAULT 'India'
+);
+alter table bsc change sid  srollno int(50);
+
+ALTER TABLE bsc modify
+    sname varchar(25);
+
+desc bsc;
+
+select * from bsc;
+
+/*Delete Drop Truncate */
+
+Drop table bca;
+select * from bsc;
+truncate table mca;
+
+UPDATE bsc SET 
+sage = 28,country="USA",sname="Jayanth V" WHERE srollno=102;
+
+delete from bsc where srollno=101;
+
